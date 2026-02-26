@@ -1,0 +1,8 @@
+h1.subheading {
+  opacity: 1;
+  color: var(--primary-colour);
+}
+
+a.normal-link {
+  box-shadow: none;
+}
