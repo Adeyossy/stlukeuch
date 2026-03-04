@@ -1,0 +1,19 @@
+.gallery-container {
+  overflow-y: hidden;
+}
+
+.overlay-bg {
+  background-color: var(--background-colour);
+  z-index: -1;
+  mix-blend-mode: color;
+}
+
+.gallery-bg {
+  z-index: -2;
+  background-color: var(--background-colour);
+  /* background-blend-mode: overlay; */
+}
+
+img.gallery-bg-img {
+  filter: blur(10px);
+}

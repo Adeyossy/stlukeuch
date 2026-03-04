@@ -1,7 +1,12 @@
 <div class="app-block">
-  <h1 class="heading-xl">Saint Luke</h1>
-  <h1 class="heading-xl">Catholic Chaplancy,</h1>
-  <h1 class="heading-xl">UCH, Ibadan.</h1>
+  <div class="app-section">
+    <h1 class="heading-xl">Saint Luke</h1>
+    <h1 class="heading-xl">Catholic Chaplancy,</h1>
+    <h1 class="heading-xl">UCH, Ibadan.</h1>
+    <br>
+    <button class="d-inline-block primary-button me-4 w-auto">WORSHIP WITH US</button>
+    <button class="d-inline-block w-auto">GET HELP</button>
+  </div>
 </div>
 <!-- <div class="app-block">
   <div class="carousel slide" data-bs-ride="carousel">
@@ -12,3 +17,104 @@
     </div>
   </div>
 </div> -->
+<hr>
+<div class="position-relative gallery-container">
+  <div class="overlay-bg position-absolute w-100 match-height"></div>
+  <div class="gallery-bg position-absolute w-100 match-height">
+    <img [src]="imgs[0].url" [alt]="imgs[0].description" class="gallery-bg-img img-fluid w-100">
+  </div>
+  <div class="container-fluid app-block">
+    <div class="row gx-5">
+      <h1 class="heading-xl fw-bold">Gallery</h1>
+      <h2 class="heading-small fw-bold">View our church pictures</h2>
+    </div>
+    <br><br>
+    <div class="row gx-5">
+      <div class="col-md-3 col-lg-3 col-xl-4 d-none d-md-block px-5">
+        <div class="thumbnail-description-pill mb-3" *ngFor="let d of imgs">
+          <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">{{ d.description }}</p>
+        </div>
+      </div>
+      <div class="col-md-9 col-lg-8 col-xl-7 padding-sm-none">
+        <div class="img-stage">
+          <img [src]="imgs[0].url" alt="" class="img-staged img-fluid w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-block">
+  <!-- <h1 class="heading-xl"></h1> -->
+  <div class="container-fluid">
+    <div class="row gy-3 align-items-center">
+      <div class="col-lg-6 col-xl-5">
+        <img src="assets/images/st.luke.3.our.lady.of.perpetual.help.resized.png" alt="" class="img-fluid">
+      </div>
+      <div class="col-lg-6 col-xl-7">
+        <h1 class="heading-xl">Support</h1>
+        <div class="">
+          <h2 class="heading-medium mb-3">Discover the ways the church can support you based on your role.</h2>
+          <h3 class="heading-small mb-1">I am in UCH, Ibadan for...</h3>
+        </div>
+        <div class="container-fluid mt-4">
+          <div class="row gy-3">
+            <div class="col-md-6 col-lg-3" *ngFor="let x of ['Healthcare', 'Studies', 'Work']">
+              <button class="">{{ x }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="app-block">
+  <h1 class="heading-xl">
+    Contact Us
+  </h1>
+  <br><br>
+  <div class="container-fluid">
+    <div class="row gy-3">
+      <div class="col-lg-4">
+        <div class="app-card">
+          <div class="app-list-item pb-4">
+            <p class="subheading fw-bold mb-0">
+              <span class="fw-bold">Call/Message/WhatsApp</span>
+              <i class="bi bi-dot color-accent"></i>
+            </p>
+            <a class="app-text-primary fs-5 opacity-75" href="tel:+2348066199175">08066199175</a>
+          </div>
+          <div class="app-list-item pb-4">
+            <p class="subheading fw-bold mb-0">
+              <span class="fw-bold">Send us an email</span>
+              <i class="bi bi-dot color-accent"></i>
+            </p>
+            <a class="app-text-primary fs-5 opacity-75" href="mailto:hello@stlukeuch.org">hello@stlukeuch.org</a>
+          </div>
+          <div class="app-list-item pb-4">
+            <p class="subheading fw-bold mb-0">
+              <span class="fw-bold">Instagram</span>
+              <i class="bi bi-dot color-accent"></i>
+            </p>
+            <a class="app-text-primary fs-5 opacity-75" href="mailto:hello@stlukeuch.org">hello@stlukeuch.org</a>
+          </div>
+          <div class="app-list-item pb-4">
+            <p class="subheading fw-bold mb-0">
+              <span class="fw-bold">Worship with us</span>
+            </p>
+            <a class="app-text-primary fs-5 opacity-75" href="https://maps.app.goo.gl/iByKyDqPydWYTD9SA">
+              St. Luke Catholic Church, UCH, UCH Secretariat Road, Agodi, Ibadan 200285, Oyo.
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="gallery-img-bg match-height">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.5738648467986!2d3.8977396000000004!3d7.401550399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10398d591733bd37%3A0xe30aa0d5e83016f3!2sSt%20Luke%20Catholic%20Church%20UCH!5e0!3m2!1sen!2sng!4v1772282234734!5m2!1sen!2sng"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="w-100 match-height img-thumbnail"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
