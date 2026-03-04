@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary-colour: #4a2574;
+  /* --primary-colour: #4a2574; */
+  --primary-colour: var(--background-colour-sepia-60);
   --primary-colour-contrast: #0F0529;
   --primary-colour-light: rgb(235, 241, 255);
   --accent-colour: #ff69b4;
@@ -12,27 +13,35 @@
   --background-colour-white: #FFF;
   --background-colour-lighter: #F8FAFC;
   --background-colour: #FFFBF3;
-  --background-colour-darker: #F1F3F6;
+  --background-colour-sepia: rgb(255, 235, 204);
+  --background-colour-sepia-10: #DD8F40;
+  --background-colour-sepia-20: #C77523;
+  --background-colour-sepia-30: #9B5C1C;
+  --background-colour-sepia-40: #704214;
+  --background-colour-sepia-50: #45290C;
+  --background-colour-sepia-60: #190F05;
+  --background-colour-darker: rgba(255, 248, 235, 1);
   --background-colour-green: rgb(200, 255, 200);
   --background-colour-red: rgb(255, 200, 200);
   --overlay-background: rgba(0, 0, 0, 0.5);
   --primary-shadow: #CCDDFF;
   --light-grey: rgb(228, 228, 228);
   --grey: rgb(214, 214, 214);
-  --border-radius: 8px;
+  --border-radius: 32px;
   --text-colour: black;
-  --text-colour-sepia: #45290C;
+  --text-colour-sepia: var(--background-colour-sepia-60);
   --spacing-large: 48px;
   --spacing-medium: 36px;
   --spacing-default: 24px;
   --spacing-small: 24px;
+  --spacing-none: 0px;
   --spacing-nav: 74px;
   --three-colours: linear-gradient(to right, var(--accent-colour-red) 0%, 
                                           var(--accent-colour-red) 33.33%, 
                                           var(--accent-colour-orange) 33.33%,
                                           var(--accent-colour-orange) 66.66%, 
                                           var(--accent-colour-green) 66.67%);
-  --font-xl: 74px;
+  --font-xl: 56px;
   --font-big: 48px;
   --font-medium: 32px;
   --font-small: 21px;
@@ -59,13 +68,13 @@ header {
 
 nav {
   /* height: var(--spacing-nav); */
-  background-color: rgba(250, 250, 250, 1);
+  background-color: var(--background-colour-darker);
   /* background-blend-mode: overlay; */
   padding: 0px 16px;
 }
 
 .app-block {
-  padding: var(--spacing-medium) var(--spacing-small);
+  padding: var(--spacing-large) var(--spacing-medium);
 }
 
 .app-block-x {
@@ -111,13 +120,12 @@ h1.heading-avantgarde {
   font-size: var(--font-small);
 }
 
-.heading-primary, .text-primary {
+.heading-primary, .app-text-primary {
   color: var(--primary-colour);
 }
 
 .subheading {
   font-size: var(--font-subheading);
-  opacity: 0.8;
 }
 
 .small-text {
@@ -130,6 +138,31 @@ h1.heading-avantgarde {
 
 .padding-default {
   padding: var(--spacing-default);
+}
+
+.padding-sm-none {
+  padding-left: var(--spacing-none);
+  padding-right: var(--spacing-none);
+}
+
+.thumbnail-description-pill {
+  border: 2px solid var(--background-colour-sepia-40);
+  border-radius: 64px;
+  background-color: var(--background-colour-sepia);
+}
+
+.thumbnail-description-pill-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* white-space: pre-wrap; */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1;
+}
+
+.img-staged {
+  border: 8px solid var(--background-colour-sepia);
+  border-radius: var(--border-radius);
 }
 
 p, label, input, li {
@@ -220,6 +253,7 @@ a {
   text-decoration: none;
   font-size: 16px;
   color: var(--primary-colour);
+  font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
 }
 
 a.link-decorated {
@@ -234,7 +268,7 @@ a.link-card {
 }
 
 .color-accent {
-  color: var(--accent-colour);
+  color: var(--accent-colour-orange);
 }
 
 i.fitted, span.fitted {
@@ -253,7 +287,7 @@ button {
   width: 100%;
   height: 64px;
   padding: 2px 5%;
-  background-color: transparent;
+  background-color: var(--background-colour-darker);
   color: var(--primary-colour);
   font-family: 'ITC Avant Garde Pro Md', Arial, Helvetica, sans-serif;
   border: 3px solid var(--primary-colour);
@@ -276,7 +310,7 @@ label.icon, button.icon {
   cursor: pointer;
   width: auto;
   height: auto;
-  padding: var(--border-radius) var(--font-text) ;
+  padding: 16px var(--font-text);
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--light-grey);
@@ -373,9 +407,9 @@ button:active {
 
 .app-card {
   width: 100%;
-  background-color: var(--background-colour-lighter);
+  background-color: var(--background-colour-sepia);
   padding: var(--spacing-default);
-  border: 2px solid var(--primary-colour-light);
+  border: 2px solid var(--primary-colour);
   border-radius: var(--border-radius);
   /* box-shadow: 8px 8px var(--primary-shadow); */
   transition: background-color 200ms ease-in;
@@ -510,6 +544,7 @@ button:active {
 @media only screen and (min-width: 768px) {
   :root {
     --spacing-default: 36px;
+    --spacing-none: var(--spacing-small);
   }
 
   button:hover {
@@ -560,6 +595,8 @@ button:active {
     --spacing-default: 48px;
     --spacing-small: 30px;
     --spacing-nav: 80px;
+    --spacing-none: var(--spacing-small);
+    --font-xl: 74px;
     --font-big: 60px;
     --font-medium: 48px;
     --font-small: 28px;
