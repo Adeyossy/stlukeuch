@@ -1,0 +1,5 @@
+button[aria-expanded="true"] {
+  background-color: var(--background-colour-darker);
+  border-color: var(--background-colour-sepia);
+  outline-color: var(--background-colour-sepia-40);
+}

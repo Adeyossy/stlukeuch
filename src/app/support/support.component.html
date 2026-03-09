@@ -1,1 +1,77 @@
-<p>support works!</p>
+<div class="app-block">
+  <div class="container-fluid">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6 pb-5">
+        <p class="small-text text-uppercase opacity-50 dotted-bottom-border">ST. LUKE CHURCH</p>
+        <h1 class="heading-xl">
+          I am in UCH,
+        </h1>
+        <h1 class="heading-xl">
+          Ibadan for
+        </h1>
+        <h1 *ngIf="category$ | async as category" class="heading-big fw-normal color-accent text-uppercase">
+          {{category}}.
+        </h1>
+        <br>
+        <button class="d-inline-block primary-button mb-4 me-4 w-auto" routerLink="." fragment="categories">MAKE A
+          PRAYER REQUEST</button>
+        <button class="d-inline-block w-auto">SEEK FURTHER HELP</button>
+      </div>
+      <div class="col-6 col-lg-3 col-xl-3" *ngFor="let image of images$ | async as images">
+        <div class="d-flex flex-column">
+          <div class="support-image-container">
+            <img [src]="image.url" alt="St. Luke" class="support-image img-fluid w-100">
+          </div>
+          <!-- <details class="description">
+            <summary>
+              <div class="thumbnail-description-pill mb-3">
+                <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">
+                  Prayer for the sick
+                </p>
+              </div>
+            </summary>
+          </details> -->
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="row p-5"></div>
+    <div class="row dotted-bottom-border w-100"></div>
+    <div class="row p-5"></div>
+    <div class="row g-4" *ngIf="category$ | async as category">
+      <div class="col-lg-4">
+        <div class="services-heading mb-3">
+          <h1 class="heading-big">Chaplancy</h1>
+          <h1 class="heading-big dotted-bottom-border">Services</h1>
+        </div>
+        <p *ngIf="getComponentHeadings(category) as comps">{{ comps }}.</p>
+      </div>
+      <div class="col-lg-8">
+        <div class="accordion" id="categories">
+          <div class="accordion-item" *ngFor="let comp of getComponent(category); index as i">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-normal text-capitalize" type="button" data-bs-toggle="collapse"
+                [attr.data-bs-target]="'#category'+(i+1)" aria-expanded="false" [attr.aria-controls]="'category'+(i+1)">
+                {{ comp.title }}
+              </button>
+            </h2>
+            <div [id]="'category'+(i+1)" class="accordion-collapse collapse" [attr.data-bs-parent]="'#category'+(i+1)">
+              <div class="accordion-body">
+                <p>{{ comp.body }}</p>
+                <div class="p-2">
+                  <!-- <input [(ngModel)]="values['category'+(i+1)]" *ngIf="comp.type != 'none'" type="text" [name]="'category'+(i+1)" [id]="'category'+(i+1)"> -->
+                  <!-- <a [href]="values['category'+(i+1)] ? comp.link.concat('?message=', values['category'+(i+1)]) : comp.link"> -->
+                  <a [href]="comp.link" *ngIf="comp.link">
+                    <button class="icon small w-auto">
+                      {{ comp.action }}
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
