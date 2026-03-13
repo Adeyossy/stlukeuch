@@ -9,6 +9,7 @@ import { SupportComponent } from './support/support.component';
 import { FormsModule } from '@angular/forms';
 import { Page5Component } from './page-5/page-5.component';
 import { Page6Component } from './page-6/page-6.component';
+import { Page8Component } from './page-8/page-8.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { Page6Component } from './page-6/page-6.component';
     NavComponent,
     SupportComponent,
     Page5Component,
-    Page6Component
+    Page6Component,
+    Page8Component
   ],
   imports: [
     BrowserModule,
