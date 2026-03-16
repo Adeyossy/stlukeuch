@@ -167,6 +167,12 @@ export class SupportComponent implements OnInit {
     );
   }
 
+  getTitle = (category: Category) => {
+    const subtitles = this.roles[category].components.title.split(" ");
+    const last = subtitles.pop();
+    return [subtitles.join(" "), last];
+  }
+
   getComponent = (category: Category) => {
     return this.roles[category].components.items;
   }

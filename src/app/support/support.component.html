@@ -41,8 +41,11 @@
     <div class="row g-4" *ngIf="category$ | async as category">
       <div class="col-lg-4">
         <div class="services-heading mb-3">
-          <h1 class="heading-big">Chaplancy</h1>
-          <h1 class="heading-big dotted-bottom-border">Services</h1>
+          <h1 class="heading-big" *ngFor="let t of getTitle(category) as subtitles; index as i"
+          [class.dotted-bottom-border]="i == subtitles.length - 1">
+            {{ t }}
+          </h1>
+          <!-- <h1 class="heading-big dotted-bottom-border">Services</h1> -->
         </div>
         <p *ngIf="getComponentHeadings(category) as comps">{{ comps }}.</p>
       </div>
@@ -73,5 +76,7 @@
         </div>
       </div>
     </div>
+    <div class="row p-5"></div>
+    <div class="row dotted-bottom-border w-100"></div>
   </div>
 </div>
