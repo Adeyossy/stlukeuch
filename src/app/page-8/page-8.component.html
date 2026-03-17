@@ -1,1 +1,33 @@
-<p>page-8 works!</p>
+<div class="app-block">
+  <div class="container-fluid">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6 pb-5">
+        <p class="small-text text-uppercase opacity-50 dotted-bottom-border text-spread">SAINT LUKE CHURCH</p>
+        <h1 class="heading-xl">
+          The Catholic Faith
+        </h1>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4" *ngFor="let section of sections">
+        <div class="app-card">
+          <h1 class="heading-small fw-bold mb-1">{{ section.title }}</h1>
+          <p class="subheading small-text opacity-75 mb-4">{{ section.subtitle }}</p>
+          <div class="app-list-item pb-4" *ngFor="let item of section.items">
+            <p class="subheading fw-bold mb-0">
+              <span class="">{{ item.heading }}</span>
+              <i class="bi bi-dot color-accent"></i>
+            </p>
+            <p class="app-text-primary fs-6 opacity-75 mb-0" *ngFor="let subheading of item.subheadings">
+              <a *ngIf="subheading.includes('http'); else text" class="text-break" [href]="subheading">{{ subheading }}</a>
+              <ng-template #text>
+                <span>{{ subheading }}</span>
+              </ng-template>
+            </p>
+            <!-- <p class="app-text-primary fs-6 opacity-75 mb-0">Family time holds after the 9am Mass</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
