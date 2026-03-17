@@ -17,3 +17,9 @@
 img.gallery-bg-img {
   filter: blur(10px);
 }
+/* 
+.carousel-control-prev, .carousel-control-next {
+  background-color: var(--background-colour-sepia);
+  border: 2px solid var(--background-colour-sepia-40);
+  border-radius: 50%;
+} */

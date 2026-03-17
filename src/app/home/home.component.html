@@ -4,8 +4,10 @@
     <h1 class="heading-xl">Catholic Chaplancy,</h1>
     <h1 class="heading-xl">UCH, Ibadan.</h1>
     <br>
-    <button class="d-inline-block primary-button me-4 w-auto">WORSHIP WITH US</button>
-    <button class="d-inline-block w-auto">GET HELP</button>
+    <button class="d-inline-block primary-button me-4 w-auto" routerLink="" fragment="contact">
+      WORSHIP WITH US
+    </button>
+    <button class="d-inline-block w-auto" routerLink="" fragment="support">GET HELP</button>
   </div>
 </div>
 <!-- <div class="app-block">
@@ -18,34 +20,53 @@
   </div>
 </div> -->
 <hr>
-<div class="position-relative gallery-container">
-  <div class="overlay-bg position-absolute w-100 match-height"></div>
-  <div class="gallery-bg position-absolute w-100 match-height">
-    <img [src]="imgs[0].url" [alt]="imgs[0].description" class="gallery-bg-img img-fluid w-100">
-  </div>
-  <div class="container-fluid app-block">
-    <div class="row gx-5">
-      <h1 class="heading-xl fw-bold">Gallery</h1>
-      <h2 class="heading-small fw-bold">View our church pictures</h2>
-    </div>
-    <br><br>
-    <div class="row gx-5">
-      <div class="col-md-3 col-lg-3 col-xl-4 d-none d-md-block px-5">
-        <div class="thumbnail-description-pill mb-3" *ngFor="let d of imgs">
-          <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">{{ d.description }}</p>
+<div class="carousel slide w-100" data-bs-ride="carousel" id="churchGallery">
+  <div class="carousel-inner">
+    <div class="position-relative gallery-container carousel-item" [class.active]="i === 0"
+      *ngFor="let img of imgs; index as i">
+      <div class="overlay-bg position-absolute w-100 match-height"></div>
+      <div class="gallery-bg position-absolute w-100 match-height overflow-hidden">
+        <img [src]="img.url" [alt]="img.description" class="gallery-bg-img img-fluid w-100">
+      </div>
+      <div class="container-fluid app-block match-height">
+        <div class="row gx-5 text-white">
+
+        </div>
+        <br><br>
+        <div class="row gx-5">
+          <div class="col-lg-4 col-xl-4">
+            <div>
+              <h1 class="heading-xl fw-bold text-white">Gallery</h1>
+              <h2 class="heading-small fw-bold text-white">View our church pictures</h2>
+            </div>
+            <br><br>
+            <div class="thumbnail-description-pill mb-3">
+              <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">
+                {{ img.description }}
+              </p>
+            </div>
+          </div>
+          <div class="col-md-9 col-lg-8 col-xl-7 padding-sm-none">
+            <div class="img-stage">
+              <img [src]="img.url" alt="" class="img-staged img-fluid w-100">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-9 col-lg-8 col-xl-7 padding-sm-none">
-        <div class="img-stage">
-          <img [src]="imgs[0].url" alt="" class="img-staged img-fluid w-100">
-        </div>
-      </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#churchGallery" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#churchGallery" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 <div class="app-block">
   <!-- <h1 class="heading-xl"></h1> -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="support">
     <div class="row gy-3 align-items-center">
       <div class="col-lg-6 col-xl-5">
         <img src="assets/images/st.luke.3.our.lady.of.perpetual.help.resized.png" alt="" class="img-fluid">
@@ -53,13 +74,13 @@
       <div class="col-lg-6 col-xl-7">
         <h1 class="heading-xl">Support</h1>
         <div class="">
-          <h2 class="heading-medium mb-3">Discover the ways the church can support you based on your role.</h2>
+          <h2 class="heading-medium mb-3">Discover the ways the church can support you based on your need.</h2>
           <h3 class="heading-small mb-1">I am in UCH, Ibadan for...</h3>
         </div>
         <div class="container-fluid mt-4">
           <div class="row gy-3">
             <div class="col-md-6 col-lg-3" *ngFor="let x of ['Healthcare', 'Studies', 'Work']">
-              <button class="">{{ x }}</button>
+              <button class="" [routerLink]="'support/'+x.toLowerCase()">{{ x }}</button>
             </div>
           </div>
         </div>
@@ -68,7 +89,7 @@
   </div>
 </div>
 <hr>
-<div class="app-block">
+<div class="app-block" id="contact">
   <h1 class="heading-xl">
     Contact Us
   </h1>
