@@ -20,50 +20,7 @@
   </div>
 </div> -->
 <hr>
-<div class="carousel slide w-100" data-bs-ride="carousel" id="churchGallery">
-  <div class="carousel-inner">
-    <div class="position-relative gallery-container carousel-item" [class.active]="i === 0"
-      *ngFor="let img of imgs; index as i">
-      <div class="overlay-bg position-absolute w-100 match-height"></div>
-      <div class="gallery-bg position-absolute w-100 match-height overflow-hidden">
-        <img [src]="img.url" [alt]="img.description" class="gallery-bg-img img-fluid w-100">
-      </div>
-      <div class="container-fluid app-block match-height">
-        <div class="row gx-5 text-white">
-
-        </div>
-        <br><br>
-        <div class="row gx-5">
-          <div class="col-lg-4 col-xl-4">
-            <div>
-              <h1 class="heading-xl fw-bold text-white">Gallery</h1>
-              <h2 class="heading-small fw-bold text-white">View our church pictures</h2>
-            </div>
-            <br><br>
-            <div class="thumbnail-description-pill mb-3">
-              <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">
-                {{ img.description }}
-              </p>
-            </div>
-          </div>
-          <div class="col-md-9 col-lg-8 col-xl-7 padding-sm-none">
-            <div class="img-stage">
-              <img [src]="img.url" alt="" class="img-staged img-fluid w-100">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#churchGallery" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#churchGallery" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+<app-carousel [imgs]="imgs" title="Gallery" subtitle="Pictures of St. Luke Church"></app-carousel>
 <div class="app-block">
   <!-- <h1 class="heading-xl"></h1> -->
   <div class="container-fluid" id="support">

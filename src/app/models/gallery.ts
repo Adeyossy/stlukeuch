@@ -1,4 +1,10 @@
-export const images = [
+export interface CarouselImage {
+  url: string,
+  description: string,
+  thumbnail: string
+}
+
+export const images: CarouselImage[] = [
   {
     url: 'assets/images/st.luke.7.sculpture.outside.church.resized.jpg',
     description: 'Sculpture outside church auditorium.',
