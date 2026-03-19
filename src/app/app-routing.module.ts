@@ -5,6 +5,7 @@ import { SupportComponent } from './support/support.component';
 import { Page5Component } from './page-5/page-5.component';
 import { Page6Component } from './page-6/page-6.component';
 import { Page8Component } from './page-8/page-8.component';
+import { Page9Component } from './page-9/page-9.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: "the-catholic-faith",
     component: Page8Component
+  },
+  {
+    path: "about-st-luke",
+    component: Page9Component
   },
   {
     path: "support/:category",
