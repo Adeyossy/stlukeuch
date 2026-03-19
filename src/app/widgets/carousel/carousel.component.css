@@ -5,7 +5,7 @@
 .overlay-bg {
   background-color: var(--background-colour);
   z-index: -1;
-  mix-blend-mode: color;
+  mix-blend-mode: soft-light;
 }
 
 .gallery-bg {
@@ -17,9 +17,7 @@
 img.gallery-bg-img {
   filter: blur(10px);
 }
-/* 
-.carousel-control-prev, .carousel-control-next {
-  background-color: var(--background-colour-sepia);
-  border: 2px solid var(--background-colour-sepia-40);
-  border-radius: 50%;
-} */
+
+button {
+  height: auto;
+}
