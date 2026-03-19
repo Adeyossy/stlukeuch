@@ -149,5 +149,5 @@ export class Page6Component {
         }
       ]
     },
-  ]
+  ];
 }
