@@ -11,6 +11,7 @@ import { Page5Component } from './page-5/page-5.component';
 import { Page6Component } from './page-6/page-6.component';
 import { Page8Component } from './page-8/page-8.component';
 import { CarouselComponent } from './widgets/carousel/carousel.component';
+import { Page9Component } from './page-9/page-9.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CarouselComponent } from './widgets/carousel/carousel.component';
     Page5Component,
     Page6Component,
     Page8Component,
-    CarouselComponent
+    CarouselComponent,
+    Page9Component
   ],
   imports: [
     BrowserModule,
