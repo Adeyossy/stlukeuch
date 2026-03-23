@@ -13,6 +13,7 @@ import { Page8Component } from './page-8/page-8.component';
 import { CarouselComponent } from './widgets/carousel/carousel.component';
 import { Page9Component } from './page-9/page-9.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FooterComponent } from './footer/footer.component';
     Page8Component,
     CarouselComponent,
     Page9Component,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
