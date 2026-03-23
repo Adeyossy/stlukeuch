@@ -12,6 +12,7 @@ import { Page6Component } from './page-6/page-6.component';
 import { Page8Component } from './page-8/page-8.component';
 import { CarouselComponent } from './widgets/carousel/carousel.component';
 import { Page9Component } from './page-9/page-9.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Page9Component } from './page-9/page-9.component';
     Page6Component,
     Page8Component,
     CarouselComponent,
-    Page9Component
+    Page9Component,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
