@@ -6,3 +6,7 @@ h1.subheading {
 a.normal-link {
   box-shadow: none;
 }
+
+button {
+  width: auto;
+}
