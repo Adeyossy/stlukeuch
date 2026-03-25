@@ -15,6 +15,7 @@ import { Page9Component } from './page-9/page-9.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { Page7Component } from './page-7/page-7.component';
+import { SectionComponent } from './widgets/section/section.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { Page7Component } from './page-7/page-7.component';
     Page9Component,
     FooterComponent,
     ContactComponent,
-    Page7Component
+    Page7Component,
+    SectionComponent
   ],
   imports: [
     BrowserModule,
