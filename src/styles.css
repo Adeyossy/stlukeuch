@@ -109,7 +109,6 @@ h1.heading-avantgarde {
 
 .heading-big {
   font-size: var(--font-big);
-  font-weight: 700;
 }
 
 .heading-medium {
@@ -454,6 +453,18 @@ button:active {
   display: inline-block;
   border-bottom: 4px dotted var(--accent-colour-orange);
   padding: 6px 0px;
+}
+
+.text-spread {
+  letter-spacing: 2px;
+}
+
+.accordion-button {
+  text-transform: none;
+}
+
+.scrim {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes slideLefttoRight {
