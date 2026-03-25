@@ -3,6 +3,10 @@ h1.subheading {
   color: var(--primary-colour);
 }
 
+li {
+  font-size: 16px;
+}
+
 a.normal-link {
   box-shadow: none;
 }

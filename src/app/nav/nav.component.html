@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid px-3 py-2">
-    <a class="navbrand" routerLink="" role="button">
+    <a class="navbrand me-5" routerLink="" role="button">
       <h1 class="heading-small heading-primary fw-bold">St. Luke Church</h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -8,12 +8,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="about-st-luke">About</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,8 +28,36 @@
             <li><a class="dropdown-item" routerLink="support/work">Work</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catholicism
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="support">Supporting St. Luke</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="the-christian-life">The Christian Life</a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="the-catholic-faith">The Catholic Faith</a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="" fragment="contact">Contact</a>
+          <a class="nav-link" routerLink="practical-information">Practical Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about-st-luke">Who are we?</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="[]" fragment="contact">Contact</a>
         </li>
       </ul>
     </div>
