@@ -1,0 +1,11 @@
+footer {
+  background-color: var(--background-colour-sepia-60);
+}
+
+p.subheading {
+  color: var(--accent-colour-orange);
+}
+
+p:not(.subheading), li, a:not(:hover) {
+  color: white;
+}
