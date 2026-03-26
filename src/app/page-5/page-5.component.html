@@ -55,69 +55,7 @@
     </div>
     <div class="row p-5"></div>
     <div class="row dotted-bottom-border w-100"></div>
-    <ng-container *ngFor="let section of sections; index as i">
-      <div class="row p-5"></div>
-      <div class="row g-4">
-        <div class="col-12 pb-5">
-          <!-- <p class="small-text text-uppercase opacity-50 dotted-bottom-border text-spread">
-            SAINT LUKE CHURCH
-          </p> -->
-          <h1 class="heading-xl">
-            {{ section.title }}
-          </h1>
-          <p class="heading-small">{{ section.subtitle }}</p>
-          <!-- <button class="d-inline-block w-auto" routerLink="." fragment="serve">LEARN MORE</button> -->
-        </div>
-        <div *ngFor="let image of section.images" class="col-6 col-lg-3 col-xl-3">
-          <div class="support-image-container">
-            <img [src]="image.url" [alt]="image.description" class="support-image img-fluid w-100">
-          </div>
-          <div class="thumbnail-description-pill mt-2 mb-5">
-            <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">
-              {{ image.description }}
-            </p>
-          </div>
-        </div>
-        <br>
-        <div class="col-12">
-          <a href="tel:+2348066199175">
-            <button class="d-inline-block primary-button mb-4 me-4 w-auto">
-              JOIN THE WORK FORCE
-            </button>
-          </a>
-        </div>
-        <div class="col-lg-8" *ngFor="let comp of section.components; index as c">
-          <div class="accordion" [id]="c">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed fw-normal text-normal" type="button" data-bs-toggle="collapse"
-                  [attr.data-bs-target]="'#category'+(c+1)" aria-expanded="false"
-                  [attr.aria-controls]="'category'+(c+1)">
-                  {{ comp.title }}
-                </button>
-              </h2>
-              <div [id]="'category'+(c+1)" class="accordion-collapse collapse"
-                [attr.data-bs-parent]="'#category'+(c+1)">
-                <div class="accordion-body">
-                  <p>{{ comp.body }}</p>
-                  <div class="p-2">
-                    <!-- <input [(ngModel)]="values['category'+(i+1)]" *ngIf="comp.type != 'none'" type="text" [name]="'category'+(i+1)" [id]="'category'+(i+1)"> -->
-                    <!-- <a [href]="values['category'+(i+1)] ? comp.link.concat('?message=', values['category'+(i+1)]) : comp.link"> -->
-                    <a [href]="comp.link" *ngIf="comp.link">
-                      <button class="icon small w-auto">
-                        {{ comp.action }}
-                      </button>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row p-5"></div>
-      <div class="row dotted-bottom-border w-100"></div>
-    </ng-container>
+    <app-section [sections]="sections"></app-section>
     <div class="row p-5"></div>
     <div class="row g-4">
       <div class="col-lg-4">

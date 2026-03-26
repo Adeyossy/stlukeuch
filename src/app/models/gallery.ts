@@ -1,3 +1,8 @@
+export interface AppImage {
+  url: string,
+  description: string,
+}
+
 export interface CarouselImage {
   url: string,
   description: string,

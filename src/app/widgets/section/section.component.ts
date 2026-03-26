@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Section } from 'src/app/models/section';
 
 @Component({
   selector: 'app-section',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./section.component.css']
 })
 export class SectionComponent {
-
+  @Input() sections: Section[] = [];
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Sections } from '../models/section';
 
 @Component({
   selector: 'app-page-5',
@@ -6,10 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-5.component.css']
 })
 export class Page5Component {
-  sections = [
+  sections: Sections = [
     {
       title: "How you can serve",
       subtitle: "We need persons to key into:",
+      components: [],
       images: [
         {
           url: "assets/images/st.luke.young.choir.jpg",
@@ -32,7 +34,10 @@ export class Page5Component {
           description: "Sacristans"
         },
       ],
-      action: "https://wa.me/2348066199175"
+      action: {
+        text: "JOIN THE WORKFORCE",
+        url: "https://wa.me/2348066199175"
+      }
     },
     {
       title: "Projects we have",
@@ -41,51 +46,55 @@ export class Page5Component {
       components: [
         {
           title: "Supporting patients in financial need",
-          body: "",
+          body: [],
           link: "",
           type: "",
           action: ""
         },
         {
           title: "Supporting students in financial difficulty",
-          body: "",
+          body: [],
           link: "",
           type: "",
           action: ""
         },
         {
           title: "Food bank for students",
-          body: "",
+          body: [],
           link: "",
           type: "",
           action: ""
         },
         {
           title: "Improving on current structure",
-          body: `
-            Please select any one of these items wherein you can provide your professional skills or materials needed, thank you:
-
-            Reading room - furniture, temperature control with renewable energy,
-            Student hostel with cheaper energy for the students,
-            Repair of the Church,
-            Maintenance of the rectory,
-            Purse for sick priest and religious,
-            Safe play area for children,
-            Irrigation of the prayer garden,
-            Solar Lighting of the prayer garden,
-            Our Lady water fountain,
-            Modernisation of the Sacristy,
-            Mass vestments,
-            Alter linen,
-            Roof maintenance of the Church,
-            Deep cleaning equipment.
-          `,
+          body: [
+            "Please select any one of these items wherein you can provide your professional skills or materials needed, thank you:",
+            [
+              "Reading room - furniture, temperature control with renewable energy",
+              "Student hostel with cheaper energy for the students",
+              "Repair of the Church",
+              "Maintenance of the rectory",
+              "Purse for sick priest and religious",
+              "Safe play area for children",
+              "Irrigation of the prayer garden",
+              "Solar Lighting of the prayer garden",
+              "Our Lady water fountain",
+              "Modernisation of the Sacristy",
+              "Mass vestments",
+              "Alter linen",
+              "Roof maintenance of the Church",
+              "Deep cleaning equipment."
+            ]
+          ],
           link: "",
           type: "",
           action: ""
         },
       ],
-      action: "https://wa.me/2348066199175"
+      action: {
+        text: "SUPPORT OUR PROJECTS",
+        url: "https://wa.me/2348066199175"
+      }
     }
   ];
 }
