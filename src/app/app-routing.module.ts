@@ -6,6 +6,7 @@ import { Page5Component } from './page-5/page-5.component';
 import { Page6Component } from './page-6/page-6.component';
 import { Page8Component } from './page-8/page-8.component';
 import { Page9Component } from './page-9/page-9.component';
+import { Page7Component } from './page-7/page-7.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: "practical-information",
     component: Page6Component
+  },
+  {
+    path: "the-christian-life",
+    component: Page7Component
   },
   {
     path: "the-catholic-faith",
