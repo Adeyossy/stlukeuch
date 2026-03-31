@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./page-10.component.css']
 })
 export class Page10Component {
-
+  request = "";
 }

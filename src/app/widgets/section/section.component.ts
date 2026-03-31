@@ -8,4 +8,17 @@ import { Section } from 'src/app/models/section';
 })
 export class SectionComponent {
   @Input() sections: Section[] = [];
+
+  isString = (variable: string | string[]) => {
+    return typeof variable === "string";
+  }
+
+  isArray = (variable: unknown) => {
+    return Array.isArray(variable);
+  }
+
+  asArray = (variable: unknown): string[] => {
+    if (this.isArray(variable)) return variable as string[];
+    return [];
+  }
 }

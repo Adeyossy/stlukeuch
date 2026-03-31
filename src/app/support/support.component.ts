@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable, of } from 'rxjs';
+import { HEALTHCARE, STUDIES, WORK } from '../models/gallery';
 
 type Category = "healthcare" | "studies" | "work";
 
@@ -12,16 +13,7 @@ type Category = "healthcare" | "studies" | "work";
 export class SupportComponent implements OnInit {
   roles = {
     healthcare: {
-      images: [
-        {
-          url: "assets/images/st.luke.png",
-          description: ""
-        },
-        {
-          url: "assets/images/st.luke.prayer.1.png",
-          description: ""
-        }
-      ],
+      images: HEALTHCARE,
       components: {
         title: "Chaplancy Services",
         items: [
@@ -64,16 +56,7 @@ export class SupportComponent implements OnInit {
       }
     },
     studies: {
-      images: [
-        {
-          url: "assets/images/female.graduand.jpg",
-          description: ""
-        },
-        {
-          url: "assets/images/male.and.female.black.students.jpg",
-          description: ""
-        },
-      ],
+      images: STUDIES,
       components: {
         title: "Student Apostolic and Academic support",
         items: [
@@ -109,16 +92,7 @@ export class SupportComponent implements OnInit {
       }
     },
     work: {
-      images: [
-        {
-          url: "assets/images/doctor.measuring.blood.pressure.jpg",
-          description: ""
-        },
-        {
-          url: "assets/images/young.black.male.at.work.jpg",
-          description: ""
-        }
-      ],
+      images: WORK,
       components: {
         title: "Workers Apostolic support",
         items: [

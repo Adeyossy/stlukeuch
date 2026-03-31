@@ -7,6 +7,7 @@ import { Page6Component } from './page-6/page-6.component';
 import { Page8Component } from './page-8/page-8.component';
 import { Page9Component } from './page-9/page-9.component';
 import { Page7Component } from './page-7/page-7.component';
+import { Page10Component } from './page-10/page-10.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: "about-st-luke",
     component: Page9Component
+  },
+  {
+    path: "prayer-request",
+    component: Page10Component
   },
   {
     path: "support/:category",

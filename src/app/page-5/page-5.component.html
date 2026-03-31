@@ -21,7 +21,7 @@
       <div class="col-6 col-lg-3 col-xl-3">
         <div class="d-flex flex-column">
           <div class="support-image-container">
-            <img src="assets/images/st.luke.4.pews.diagonal.view.resized.jpg" alt="St. Luke"
+            <img [src]="first[0].url" [alt]="first[0].description"
               class="support-image img-fluid w-100">
           </div>
           <!-- <details class="description">
@@ -38,7 +38,7 @@
       <div class="col-6 col-lg-3 col-xl-3">
         <div class="d-flex flex-column">
           <div class="support-image-container">
-            <img src="assets/images/st.luke.5.pews.centered.mural.resized.jpg" alt="St. Luke"
+            <img [src]="first[1].url" [alt]="first[1].description"
               class="support-image img-fluid w-100">
           </div>
           <!-- <details class="description">
@@ -56,44 +56,5 @@
     <div class="row p-5"></div>
     <div class="row dotted-bottom-border w-100"></div>
     <app-section [sections]="sections"></app-section>
-    <div class="row p-5"></div>
-    <div class="row g-4">
-      <div class="col-lg-4">
-        <div class="services-heading mb-3">
-          <h1 class="heading-big"></h1>
-          <!-- <h1 class="heading-big dotted-bottom-border">Services</h1> -->
-        </div>
-        <!-- <p *ngIf="getComponentHeadings(category) as comps">{{ comps }}.</p> -->
-      </div>
-      <div class="col-lg-8">
-        <div class="accordion" id="categories">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed fw-normal text-capitalize" type="button"
-                data-bs-toggle="collapse" [attr.data-bs-target]="'#category'+(1)" aria-expanded="false"
-                [attr.aria-controls]="'category'+(1)">
-                {{ '' }}
-              </button>
-            </h2>
-            <div [id]="'category'+(1)" class="accordion-collapse collapse" [attr.data-bs-parent]="'#category'+(1)">
-              <div class="accordion-body">
-                <p>{{ '' }}</p>
-                <div class="p-2">
-                  <!-- <input [(ngModel)]="values['category'+(i+1)]" *ngIf="comp.type != 'none'" type="text" [name]="'category'+(i+1)" [id]="'category'+(i+1)"> -->
-                  <!-- <a [href]="values['category'+(i+1)] ? comp.link.concat('?message=', values['category'+(i+1)]) : comp.link"> -->
-                  <a [href]="" *ngIf="">
-                    <button class="icon small w-auto">
-                      {{ '' }}
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row p-5"></div>
-    <div class="row dotted-bottom-border w-100"></div>
   </div>
-</div>e
+</div>

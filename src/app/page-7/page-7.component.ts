@@ -79,12 +79,12 @@ export class Page7Component {
       components: [],
       images: [
         {
-          url: "assets/images/baby.baptism.png",
-          description: "Baby Baptism"
+          url: 'https://firebasestorage.googleapis.com/v0/b/stlukeuch.firebasestorage.app/o/static%2Fbaby.baptism.png?alt=media&token=1be59c56-28be-4dfa-aca2-5c3c68eee716',
+          description: 'Picture of an infant being baptised.'
         },
         {
-          url: "assets/images/communion.png",
-          description: "Communion"
+          url: 'https://firebasestorage.googleapis.com/v0/b/stlukeuch.firebasestorage.app/o/static%2Fcommunion.png?alt=media&token=bd4181ed-d329-49fc-b6fd-490334b29dde',
+          description: 'Sacrament of the Holy Eucharist.'
         }
       ],
       action: {
@@ -105,12 +105,12 @@ export class Page7Component {
       components: [],
       images: [
         {
-          url: "assets/images/baby.baptism.png",
-          description: "Baby Baptism"
+          url: "https://firebasestorage.googleapis.com/v0/b/stlukeuch.firebasestorage.app/o/static%2Fmarriage.1.jpg?alt=media&token=7a6c49eb-533f-4fc8-a1d9-eddf115bb6ee",
+          description: "Marriage"
         },
         {
-          url: "assets/images/communion.png",
-          description: "Communion"
+          url: "https://firebasestorage.googleapis.com/v0/b/stlukeuch.firebasestorage.app/o/static%2Fmarriage.2.jpg?alt=media&token=ac052e34-b799-4db5-8be7-44b305dbf90d",
+          description: "Altar"
         }
       ],
       action: {
@@ -135,7 +135,7 @@ export class Page7Component {
           title: "Catechism",
           body: [
             "There is catechism for children on Saturdays at 4 pm in the Church hall.",
-            "We also have children’s mass guided by a religious to optimise their learning and participation during the Holy Mass.",
+            "We also have children's mass guided by a religious to optimise their learning and participation during the Holy Mass.",
             "There is catechism for adults on Saturday from 4 - 6pm in an office within the Church hall.",
           ],
           link: "",

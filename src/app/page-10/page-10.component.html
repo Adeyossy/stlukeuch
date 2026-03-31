@@ -1,1 +1,22 @@
-<p>page-10 works!</p>
+<div class="app-block">
+  <div class="container-fluid">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6 pb-5">
+        <p class="small-text text-uppercase opacity-50 dotted-bottom-border text-spread">SAINT LUKE CHURCH</p>
+        <h1 class="heading-xl">
+          Making a Prayer Request
+        </h1>
+      </div>
+      <div class="col-lg-6">
+        <h1 class="heading-small">Prayer Request</h1>
+        <br>
+        <textarea name="prayer-request" id="prayer-request" cols="30" rows="10"
+        class="w-100 p-3" [(ngModel)]="request"></textarea>
+        <br>
+        <a href="https://wa.me/2348066199175?text={{request}}" target="_blank">
+          <button class="w-auto">Send Request</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

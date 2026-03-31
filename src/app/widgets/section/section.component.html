@@ -1,34 +1,34 @@
 <ng-container *ngFor="let section of sections; index as i">
   <div class="row p-5"></div>
   <div class="row g-4">
-    <div class="col-12 pb-5">
+    <div class="pb-5 pe-5" [ngClass]="section.images.length > 2 ? 'col-12' : 'col-lg-6'">
       <!-- <p class="small-text text-uppercase opacity-50 dotted-bottom-border text-spread">
             SAINT LUKE CHURCH
           </p> -->
-      <h1 class="heading-xl">
+      <h1 class="heading-xl dotted-bottom-border pb-1 mb-3">
         {{ section.title }}
       </h1>
-      <p class="heading-small">{{ section.subtitle }}</p>
+      <p class="heading-small mb-3">{{ section.subtitle }}</p>
       <!-- <button class="d-inline-block w-auto" routerLink="." fragment="serve">LEARN MORE</button> -->
+       <p class="subheading opacity-75" *ngFor="let b of section.body">{{ b }}</p>
+       <br>
+       <a [href]="section.action.url" *ngIf="section.action.url">
+        <button class="d-inline-block primary-button mb-4 me-4 w-auto">
+          {{section.action.text}}
+        </button>
+      </a>
     </div>
     <div *ngFor="let image of section.images" class="col-6 col-lg-3 col-xl-3">
       <div class="support-image-container">
         <img [src]="image.url" [alt]="image.description" class="support-image img-fluid w-100">
       </div>
       <div class="thumbnail-description-pill mt-2 mb-5">
-        <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0" role="button">
+        <p class="px-4 py-4 thumbnail-description-pill-text small-text m-0 text-new-line" role="button">
           {{ image.description }}
         </p>
       </div>
     </div>
     <br>
-    <div class="col-12">
-      <a [href]="section.action.url">
-        <button class="d-inline-block primary-button mb-4 me-4 w-auto">
-          {{section.action.text}}
-        </button>
-      </a>
-    </div>
     <ng-container *ngIf="'components' in section">
       <div class="col-lg-8" *ngFor="let comp of section.components; index as c">
         <div class="accordion" [id]="c">
@@ -41,7 +41,14 @@
             </h2>
             <div [id]="'category'+(c+1)" class="accordion-collapse collapse" [attr.data-bs-parent]="'#category'+(c+1)">
               <div class="accordion-body">
-                <p *ngFor="let b of comp.body">{{ b }}</p>
+                <div *ngFor="let b of comp.body">
+                  <p *ngIf="isString(b); else array">{{ b }}</p>
+                  <ng-template #array>
+                    <ul>
+                      <li *ngFor="let c of asArray(b)">{{ c }}</li>
+                    </ul>
+                  </ng-template>
+                </div>
                 <div class="p-2">
                   <!-- <input [(ngModel)]="values['category'+(i+1)]" *ngIf="comp.type != 'none'" type="text" [name]="'category'+(i+1)" [id]="'category'+(i+1)"> -->
                   <!-- <a [href]="values['category'+(i+1)] ? comp.link.concat('?message=', values['category'+(i+1)]) : comp.link"> -->

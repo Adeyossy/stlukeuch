@@ -16,6 +16,7 @@ export interface Component {
 export interface ImagedSection {
   title: string,
   subtitle: string,
+  body: string[],
   images: AppImage[],
   action: Action
 }
